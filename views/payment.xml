@@ -1,0 +1,81 @@
+<odoo>
+    <data>
+        <menuitem id="menu_client_contract_payment_types" name="Payments" parent="menu_client_contract" sequence="3"/>
+
+        <record id="view_client_contract_payment_tree" model="ir.ui.view">
+            <field name="name">client_contract.payment.tree</field>
+            <field name="model">client_contract.payment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_client_contract_payment_form" model="ir.ui.view">
+            <field name="name">client_contract.payment.form</field>
+            <field name="model">client_contract.payment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_client_contract_payment" model="ir.actions.act_window">
+            <field name="name">Client Contract Payment</field>
+            <field name="res_model">client_contract.payment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click here to create a new client contract payment Type.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_client_contract_payment" name="Annual" parent="menu_client_contract_payment_types" sequence="1" action="action_client_contract_payment"/>
+
+        <!-- View for client_contract.payment.month model -->
+        <record id="view_client_contract_payment_month_tree" model="ir.ui.view">
+            <field name="name">client_contract.payment.month.tree</field>
+            <field name="model">client_contract.payment.month</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_client_contract_payment_month_form" model="ir.ui.view">
+            <field name="name">client_contract.payment.month.form</field>
+            <field name="model">client_contract.payment.month</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_client_contract_payment_month" model="ir.actions.act_window">
+            <field name="name">Client Contract Payment Month</field>
+            <field name="res_model">client_contract.payment.month</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click here to create a new client contract payment month Type.
+                </p>
+            </field>
+        </record>
+
+<menuitem id="menu_client_contract_payment_month" name="Monthly" parent="menu_client_contract_payment_types" sequence="2" action="action_client_contract_payment_month"/>
+
+    </data>
+</odoo>

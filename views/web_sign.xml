@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+<template id="sign_document_template" name="Sign Document">
+    <form method="post" action="/sign_document/sign">
+        <input type="hidden" name="document_id" t-att-value="document.id"/>
+        <label for="signature">Signature:</label>
+        <input type="text" name="signature" required="required"/>
+        <input type="submit" value="Sign"/>
+    </form>
+</template>
+    </data>
+</odoo>

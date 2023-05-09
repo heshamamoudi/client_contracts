@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <!-- Model view definition -->
+        <record id="view_client_contract_contract_form" model="ir.ui.view">
+            <field name="name">client_contract.contract.form</field>
+            <field name="model">client_contract.contract</field>
+            <field name="arch" type="xml">
+                <form string="Client Contract">
+                    <header>
+                    </header>
+                    <group>
+                        <group>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                        <field name="date"/>
+                        <field name="client_responsible" />
+                        <field name="product_type"/>
+                        <field name="monthly_pay"/>
+                        <field name="monthly_vat"/>
+                        <field name="monthly_total"/>
+                        <field name="total"/>
+
+                    </group>
+                     <group>
+                        <field name="monthly_pay_type"/>
+                        <field name="annual_pay_type"/>
+                        <field name="init_pay"/>
+                        <field name="due_init"/>
+                        <field name="last_pay"/>
+                        <field name="due_last"/>
+
+                    </group>
+                    </group>
+
+                     <notebook>
+                <page string="Appendixes">
+                  <field name="contract_types">
+                    <tree editable="bottom">
+                      <field name="name"/>
+                    </tree>
+                  </field>
+                </page>
+              </notebook>
+                </form>
+            </field>
+        </record>
+
+        <!-- Model action definition -->
+        <record id="client_contract_contract_action" model="ir.actions.act_window">
+            <field name="name">Client Contracts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">client_contract.contract</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- Model menu definition -->
+        <menuitem id="menu_client_contract" name="Client Contracts"/>
+        <menuitem id="menu_client_contract_contract" name="Contracts" parent="menu_client_contract"
+                  action="client_contract_contract_action" sequence="0"/>
+
+    </data>
+</odoo>

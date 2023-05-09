@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_client_contract_contract,client_contract.contract,model_client_contract_contract,base.group_user,1,1,1,1
+access_client_contract_payment,client_contract.payment,model_client_contract_payment,base.group_user,1,1,1,1
+access_client_contract_payment_month,client_contract.payment.month,model_client_contract_payment_month,base.group_user,1,1,1,1
+access_client_contract_product,client_contract.product,model_client_contract_product,base.group_user,1,1,1,1
+access_client_contract_appendix,client_contract.appendix,model_client_contract_appendix,base.group_user,1,1,1,1
+access_client_contract_appendix_line,client_contract.appendix.line,model_client_contract_appendix_line,base.group_user,1,1,1,1
